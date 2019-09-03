@@ -5,6 +5,7 @@ package org.zhuzhu.itc.geows;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+@ComponentScan("org.zhuzhu.itc.geows.*")
 public class ItcGeoWsApplication {
 
   public static void main(String[] args) {

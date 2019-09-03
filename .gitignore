@@ -34,4 +34,7 @@ build/
 ### Other ###
 .DS_Store
 .mvn/
+datafile/*
+!datafile/template.xlsx
+.attach_pid*
 

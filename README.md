@@ -86,7 +86,28 @@ Other libraries that could be used:
 
 ## Manual
 
-
+1. Test application: `http://localhost:8080/index`.
+2. all data (except files) should be in JSON format
+3. should have API for adding a job for file parsing ( “register-job”)
+http://localhost:8080/register-job
+4. “register-job” should return id of the Job
+return: `{"result":true,"message":"Add a new job: 1","response":null}`
+5. File should be parsed in asynchronous way, result should be stored id db
+`http://localhost:8080/list-jobs`
+6. should have API for getting result of parsed file by Job ID
+http://localhost:8080/job/1
+`{"Job ID":1,"filename":"template.xlsx","Create time:":"2019-09-03 21:29:41","Update time:":"2019-09-03 21:29:47","status":"in progress","result":null}`
+7. should have API for searching results by name, code
+`http://localhost:8080/search-sections?key=Section`
+`http://localhost:8080/search-sections?key=GC`
+`http://localhost:8080/search-sections?key=GCX`
+8. Basic Authorization should be supported (optional)
+9. Page for jobs adding and result view (optional)
+`http://localhost:8080/list-jobs`
+`http://localhost:8080/list-files`
+http://localhost:8080/list-sections
+http://localhost:8080/list-geoclasses
+http://localhost:8080/section/1/list-geoclasses
 
 ## Reference Documentation
 

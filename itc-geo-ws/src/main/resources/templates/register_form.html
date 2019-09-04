@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<title>Upload</title>
+</head>
+<body>
+  <div>
+    <form method="GET" th:action="register-job">
+      <table>
+        <tr>
+          <td>Choose a file:</td>
+          <div>
+            <select name="filename">
+              <option th:each="file : ${files}" th:value="${file.value}">[[${file.value}]]</option>
+              </li>
+            </select>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Register" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div>
+    <h2>File Preview:</h2>
+    <ul>
+      <li th:each="file : ${files}"><a th:href="${file.key}" th:text="${file.value}" /></li>
+    </ul>
+  </div>
+</body>
+</html>

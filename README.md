@@ -19,7 +19,7 @@ Table of contents
 
 ## Introduction
 
-
+Two applications: one for web service and one for front-end chart.
 
 
 ## Requirements
@@ -92,13 +92,16 @@ Environment:
 1. JDK 1.8.0_91
 2. Apache Maven 3.3.9
 3. Eclipse 2019-06 (4.12.0)
+4. WebStorm 2017.02
 
 Development:
 
-1. Spring Boot 2.1.7.RELEASE (including Spring Data, Spring Web, Spring Web Services).
-2. Apache Poi 3.17.
-3. H2 Database Engine.
-4. AngularJS
+1. Spring Boot 2.1.7.RELEASE (including Spring Data, Spring Web, Spring Web Services)
+2. Apache Poi 3.17
+3. H2 Database Engine
+4. AngularJS 1.7.8
+5. Bootstrap 3.4.1
+6. Angular Bootstrap 2.5.0
 
 
 ## Tasks
@@ -129,14 +132,28 @@ There is a menu for operations.
 
 __Frontend__:
 
+1. [x] a selector for number of charts.
+2. [x] a selector for date period.
+3. [x] a directive for charts.
+4. [x] select sensors.
+5. [x] select type of information.
+6. [x] choose colors.
+7. [x] change chart type: line, bar and column.
+
 
 ## Manual
 
 (TBD)
+For the web service application:
 ```
 mvn install
 
 java -jar target/itc-geo-ws-0.0.1-SNAPSHOT.jar
+```
+
+For the front-end page:
+```
+http-server -p 8000
 ```
 
 
@@ -150,3 +167,4 @@ For further reference, please consider the following sections:
 * [Spring Web Starter](https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-developing-web-applications)
 * [Spring Web Services](https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-webservices)
 * [AngularJS](https://angularjs.org/)
+* [AngularJS UI Bootstrap](https://angular-ui.github.io/bootstrap/)

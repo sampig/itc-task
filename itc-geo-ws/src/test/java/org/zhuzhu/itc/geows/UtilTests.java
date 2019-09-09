@@ -29,7 +29,7 @@ public class UtilTests {
   @Test
   public void testFile() throws Exception {
     String dir = "datafile";
-    String filename = "test.xlsx";
+    String filename = "template.xlsx";
     Path path = Paths.get(dir);
     Path filepath = path.resolve(filename);
     File file = filepath.toFile();
